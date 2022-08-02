@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Registration</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-
-</head>
-<body >
-<div >
-
-</div>
-<div >
-    <h2>Registration Form</h2>
-
-        <div >
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="Enter email" name="email">
-           
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="tải xuống.jpg" />
+    <title>ThôngTinCáNhân</title>
+  </head>
+  <body>
+    <form style="background-color: grey; text-align: center;" >
+      <div>
+        <h1 style="color: red;">Form Điền Thông Tin Cá Nhân</h1>
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" placeholder="Enter your email" id="email" />
         </div>
-        <div >
-            <label for="pwd">Password:</label>
-            <input type="password" id="pwd" placeholder="Enter password" name="pswd">
-          
+        <br />
+        <div>
+          <label for="name">Name :</label>
+          <input type="text" placeholder="Enter your name" id="name" />
         </div>
-        <div >
-            <label for="pwd">Confirm Password:</label>
-            <input type="password"  id="cpwd" placeholder="Enter confirm password" name="cpswd">
-           
+        <br />
+        <div>
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday" />
         </div>
-        <div >
-            <label >
-                <input  type="checkbox" name="remember"> Remember me
-            </label>
+        <br />
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="genderlist" >
+            <option >Male</option>
+            <option >Female</option>
+          </select>
         </div>
-    <div>
-        <button  >Register</button>
-        <button  >Reset</button>
-    </div>
-</div>
-
-</body>
+      </div>
+      <br/>
+      <div>
+        <button style="width: 100px;">Submit</button>
+      </div>
+    </form>
+  </body>
 </html>
