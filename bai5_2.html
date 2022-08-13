@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 600px;
+        height: 600px;
+        border: 1px solid blue;
+        background-color: rgb(76, 76, 236);
+        border-radius: 10px;
+        position: absolute;
+        left: calc(50vw - 300px);
+      }
+      .card-img {
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        position: relative;
+        top: 100px;
+        left: 150px;
+      }
+      .card-title {
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        position: relative;
+        bottom: 100px;
+        left: 150px;
+      }
+      .icon {
+        margin-left: 20px;
+        color: blue;
+      }
+      .btn{
+        margin-top: 10px;
+      }
+      .icon-1 {
+        width: 20px;
+        height: 20px;
+        border: 1px solid white;
+        margin-left: 20px;
+        display: flex;
+        border-radius: 50%;
+      }
+      .icon-2 {
+        width: 115px;
+        padding: 10px;
+        border: 1px solid blue;
+        color: white;
+        background-color: blue;
+      }
+      .icon-color{
+        display: flex; justify-content: flex-start;
+      }
+      .icon-3 {
+        padding: 10px;
+        border: 1px solid blue;
+        color: blue;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      #title {
+        margin-left: 20px;
+        font-size: 25px;
+      }
+      #price{
+        margin-right: 20px; color: blue; font-size: 20px;
+      }
+      .note{
+        margin-left: 20px;
+      }
+      .size{
+        margin-left: 20px; margin-top: 10px;
+      }
+      .color{
+        margin-left: 20px; margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-img">
+        <div>
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png"
+            alt=""
+            width="300px"
+          />
+        </div>
+      </div>
+      <div class="card-title">
+        <div class="wrapper">
+          <span id="title">Adidas Originals</span>
+          <span id="price"
+            >$29.99</span
+          >
+        </div>
+        <div class="note">Men's running tshirt</div>
+        <div class="size">SIZE</div>
+        <div>
+          <span class="icon">XS</span>
+          <span class="icon">S</span>
+          <span class="icon">M</span>
+          <span class="icon">L</span>
+          <span class="icon">XL</span>
+        </div>
+        <div class="color">COLOUR</div>
+        <div class="icon-color">
+          <span style="background-color: gray" class="icon-1"></span>
+          <span style="background-color: blue" class="icon-1"></span>
+          <span style="background-color: darkorange" class="icon-1"></span>
+        </div>
+        <div class="btn">
+          <button style="margin-left: 20px" class="icon-2">BUY NOW</button>
+          <button style="margin-left: 30px" class="icon-3">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
