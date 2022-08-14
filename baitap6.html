@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai_tap_6</title>
+    <style>
+    
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px;
+        margin: 30px 30px;
+      }
+
+      .card {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 50px;
+      }
+      .title {
+        position: relative;
+        left: 35px;
+      }
+      .card-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 60px 0 0 0;
+        background-color: white;
+        transform: translateY(100%);
+        transition: 0.2s ease-in-out;
+      }
+      .header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        padding: 30px;
+        border-radius: 60px 0 0 0;
+        background-color: white;
+        transform: translateY(-100%);
+        transition: 0.2s ease-in-out;
+      }
+      .note {
+        padding: 0 30px 30px;
+        margin: 0;
+        color: #eea4c9;
+        font-family: "MockFlowFont";
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+      .img {
+        width: 100%;
+        height: auto;
+      }
+      .icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .box-radius {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        z-index: 1;
+      }
+      .box-radius path {
+        fill: white;
+        d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+      }
+      .text-header{
+        font-size: 17px;
+    margin: 0 0 0 1px;
+    color: #684959;
+      }
+      .time ,.text-header2{
+        font-size: 13px;
+    color: #D7BDCA;
+      }
+      .card:hover .card-title {
+        transform: translateY(0);
+      }
+      .card:hover .header {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div>
+          <img class="img" src="https://i.imgur.com/oYiTqum.jpg" />
+        </div>
+        <div class="card-title">
+          <div class="header">
+            <svg class="box-radius" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <img class="icon" src="https://i.imgur.com/7D7I6dI.png" />
+            <div class="title">
+              <h3 class="text-header">Jessica Parker</h3>
+              <span class="time">1 hour ago</span>
+            </div>
+          </div>
+          <p class="note">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            blanditiis?
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img class="img" src="https://i.imgur.com/2DhmtJ4.jpg" />
+        </div>
+        <div class="card-title">
+          <div class="header">
+            <svg class="box-radius" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <img class="icon" src="https://i.imgur.com/sjLMNDM.png" />
+            <div class="title">
+              <h3 class="text-header">kim Cattrall</h3>
+              <span class="time">3 hour ago</span>
+            </div>
+          </div>
+          <p class="note">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            blanditiis?
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img class="img" src="https://i.imgur.com/oYiTqum.jpg" />
+        </div>
+        <div class="card-title">
+          <div class="header">
+            <svg class="box-radius" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <img class="icon" src="https://i.imgur.com/7D7I6dI.png" />
+            <div class="title">
+              <h3 class="text-header">Jessica Parker</h3>
+              <p class="text-header2">Lorem ipsum dolor sit amet consectetur</p>
+              <span class="time">1 hour ago</span>
+            </div>
+          </div>
+          <p class="note">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            blanditiis?
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img class="img" src="https://i.imgur.com/2DhmtJ4.jpg" />
+        </div>
+        <div class="card-title">
+          <div class="header">
+            <svg class="box-radius" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <img class="icon" src="https://i.imgur.com/sjLMNDM.png" />
+            <div class="title">
+              <h3 class="text-header">kim Cattrall</h3>
+              <span class="time">3 hour ago</span>
+            </div>
+          </div>
+          <p class="note">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            blanditiis?
+          </p>
+        </div>
+      </div>       
+    </div>
+  </body>
+</html>
