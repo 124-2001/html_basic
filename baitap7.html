@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai_tap_7</title>
+
+    <style>
+      /* style */
+      .loader {
+        border: 16px solid rgb(214, 209, 209);
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        animation: spinlesson1 2s linear infinite;
+        margin-left: 300px;
+      }
+      .icon {
+        width: 120px;
+        height: 120px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        margin-left: 300px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBsIGxeeiaxvVKR5ElIJbAIKigOgiZBNy4A&usqp=CAU");
+        background-position: center;
+        background-size: 115%;
+        background-repeat: no-repeat;
+        animation: floatlesson2 4.5s linear infinite;
+        box-shadow: -1px 8px 20px 1px #aaa;
+      }
+      .text {
+        font-size: 37px;
+        font-weight: 800;
+        font-family: system-ui;
+        margin-left: 330px;
+        animation: letter_effect 4.5s linear infinite;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #box1,
+      #box2,
+      #box3,
+      #box4,
+      #box5 {
+        width: 20px;
+        height: 20px;
+        border: 0px none rgb(255, 255, 255);
+        border-radius: 50%;
+        position: absolute;
+        margin-top: 250px;
+        box-shadow: inset 10px 10px 20px #a5a7a9, inset -10px -10px 20px #ffffff;
+        opacity: 0;
+        animation: ripple_effect 5s infinite;
+      }
+      #box1 {
+        animation-delay: 1000ms;
+      }
+      #box2 {
+        animation-delay: 1500ms;
+      }
+      #box3 {
+        animation-delay: 2000ms;
+      }
+      #box4 {
+        animation-delay: 2500ms;
+      }
+      #box5 {
+        animation-delay: 3000ms;
+      }
+      .battery {
+        position: relative;
+        display: block;
+        margin: 20px 65px;
+        background: #ffffff;
+        width: 10px;
+        height: 28px;
+        margin-left: 355px;
+      }
+      .battery::before {
+        width: 50px;
+        height: 30px;
+        border: 3px solid black;
+        display: block;
+        content: "";
+        position: absolute;
+      }
+      .battery::after {
+        content: "";
+        width: 13px;
+        height: 22px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        margin-left: 56px;
+        margin-top: -21px;
+      }
+      .charging{
+        
+        height: 28px;
+        
+        position: relative;
+        top: 4px;
+        left: 4px;   
+        animation: charging 6s linear infinite;    
+      }
+
+      /* style lesson */
+      .lesson1 {
+        background-color: rgb(169, 216, 200);
+        height: 240px;
+      }
+      .lesson2 {
+        background-color: rgb(203, 216, 169);
+        height: 200px;
+      }
+      .lesson3 {
+        background-color: rgb(198, 229, 186);
+        height: 220px;
+      }
+      .lesson4 {
+        background-color: rgb(199, 207, 125);
+        height: 390px;
+      }
+      .lesson5 {
+        height: 125px;
+        background-color: white;
+      }
+      /* keyfarmes */
+      @keyframes spinlesson1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes floatlesson2 {
+        0% {
+          transform: translateY(0);
+        }
+        10% {
+          transform: translateY(10px);
+        }
+        20% {
+          transform: translateY(15px);
+        }
+        30% {
+          transform: translateY(20px);
+        }
+        40% {
+          transform: translateY(-5px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+        70% {
+          transform: translateY(-20px);
+        }
+        80% {
+          transform: translateY(-25px);
+        }
+        90% {
+          transform: translateY(5px);
+        }
+        100% {
+          transform: translateY(10px);
+        }
+      }
+      @keyframes letter_effect {
+        0% {
+          transform: scale(0.5, 0.5);
+          color: #648888;
+        }
+        50% {
+          transform: scale(1.5);
+          color: #1453dbee;
+        }
+        100% {
+          transform: scale(0.5, 0.5);
+          color: #84badf;
+        }
+      }
+      @keyframes ripple_effect {
+        0% {
+          width: 20px;
+          height: 20px;
+          opacity: 1;
+        }
+        100% {
+          width: 800px;
+          height: 400px;
+          opacity: 0;
+        }
+      }
+      @keyframes charging {
+        0%{
+          width: 0px;
+          background-color: red;
+        }
+        10%{
+          width: 4.8px;
+          background-color: rgba(250, 52, 52, 0.856);
+        }
+        20%{
+          width: 9.6px;
+          background-color: rgba(248, 89, 89, 0.493);
+        }
+        30%{
+          width: 14px;
+          background-color: rgb(252, 214, 90);
+        }
+        50%{
+          width: 24px;
+          background-color: rgb(150, 243, 114);
+        }
+        70%{
+          width: 33px;
+          background-color: rgb(158, 247, 85);
+        }
+        90%{
+          width: 43px;
+          background-color: rgb(109, 247, 45);
+        }
+        100%{
+          width: 48px;
+          background-color: rgb(94, 255, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson1">
+      <div><h3>Bài 1:Loading Spinner</h3></div>
+      <div class="loader"></div>
+    </div>
+
+    <div class="lesson2">
+      <div><h3>Bài 2:Floating Icon</h3></div>
+      <div class="icon"></div>
+    </div>
+
+    <div class="lesson3">
+      <div><h3>Bài 3:Hiệu Ứng Chữ Đổ</h3></div>
+      <div>
+        <p class="text">TechMaster</p>
+      </div>
+    </div>
+
+    <div class="lesson4">
+      <div><h3>Bài 4:Pulse / Ripple Effect</h3></div>
+      <div class="box">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+      </div>
+    </div>
+
+    <div class="lesson5">
+      <div><h3>Bài 5:Hiệu Ứng Pin Đầy</h3></div>
+      <div>
+        <div class="battery">
+          <div class="charging"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
